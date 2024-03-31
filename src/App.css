@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  width: 100vw;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.allProducts,
+.loading {
+  width: 75%;
+  height: 100%;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.showPrice {
+  margin: 0 auto;
+  width: max-content;
+  margin-bottom: 30px;
+}
+.allProducts h1,
+.cartProducts h1 {
+  width: max-content;
+
+  margin: 30px auto;
+}
+
+.allProductsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+.allProduct {
+  height: 200px;
+  width: 160px;
+}
+.button {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  cursor: pointer;
+  padding: 7px 12px;
+  border: none;
+}
+.price {
+  font-size: 0.9rem;
+}
+.allProduct img {
+  height: 70%;
+  width: 100%;
+  object-fit: contain;
+}
+.title {
+  font-weight: bold;
+}
+.cartQuantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartQuantity button {
+  font-size: 1rem;
+  padding: 3px 7px;
+  cursor: pointer;
+  margin: 0 7px;
+  border: none;
+  color: white;
+  background-color: rgb(60, 108, 198);
+}
+.imagetitle {
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
+  width: 60%;
+}
+.cartProducts {
+  width: 35%;
+  height: 100%;
+  background-color: rgb(234, 234, 234);
+}
+.cartTitle {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.cartProductContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartProduct {
+  height: 60px;
+  width: 90%;
+
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cartProduct img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.showPrice {
+  font-size: 1.2rem;
+}
+.remove {
+  background-color: rgba(215, 46, 46, 0.932);
+  color: white;
+}
+@media only screen and (max-width: 431px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .allProducts,
+  .loading {
+    width: 100%;
+    min-height: 100%;
+  }
+  .allProductsContainer {
+    gap: 30px;
+  }
+  .allProduct {
+    height: 160px;
+    width: 130px;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .price {
+    font-size: 0.85rem;
+  }
+  .allProduct img {
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .cartProducts {
+    width: 100%;
+  }
+}
