@@ -47,46 +47,23 @@ function App() {
   };
   function moveButton() {
     const noButton = document.getElementById("no");
-    // let randomX = Math.random()
-    let maxWidth = screen.availWidth;
-    let maxHeight = screen.availHeight;
-    console.log(maxWidth, maxHeight);
+    let maxWidth = window.innerWidth - noButton.offsetWidth; // consider button width
+    let maxHeight = window.innerHeight - noButton.offsetHeight; // consider button height
     let randomX = Math.floor(Math.random() * maxWidth);
     let randomY = Math.floor(Math.random() * maxHeight);
-    if (maxWidth > 431) {
-      if (randomY > maxHeight - 200) {
-        randomY -= 200;
-      } else if (randomY < 200) {
-        randomY += 200;
-      } else if (randomX > maxHeight - 200) {
-        randomX -= 400;
-      } else if (randomX < 200) {
-        randomX += 400;
-      }
-    } else {
-      if (randomY > maxHeight - 65) {
-        console.log("mathi lyau");
-        randomY -= 50;
-      } else if (randomY < 65) {
-        console.log("lata lyau");
-        randomY += 50;
-      } else if (randomX > maxHeight - 65) {
-        console.log("left lyau");
-        randomX -= 50;
-      } else if (randomX < 65) {
-        console.log("right lyau");
-        randomX += 50;
-      }
-    }
-    console.log(randomX, randomY);
-    noButton.style.position = `absolute`;
-    noButton.style.top = `${randomY}px`;
-    noButton.style.left = `${randomX}px`;
+
+    console.log("x" + randomX, "y" + randomY);
+    noButton.style.position = "absolute";
+    noButton.style.left = randomX + "px";
+    noButton.style.top = randomY + "px";
   }
+
   useEffect(() => {
     getAllData();
     const noButton = document.getElementById("no");
+
     noButton.addEventListener("click", moveButton);
+
     return () => {
       noButton.removeEventListener("click", moveButton);
     };

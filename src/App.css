@@ -160,6 +160,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: none;
 }
 .padhnajau {
   background-color: white;
@@ -182,16 +183,14 @@ body {
   color: white;
   text-decoration: none;
   font-weight: normal;
-  position: absolute;
+
+  width: 150px;
 }
 #no {
-  top: 67.5%;
-  left: 50%;
   transition: all 0.5s ease;
   background-color: rgb(201, 67, 67);
 }
 #yes {
-  left: 38%;
   background-color: rgb(80, 181, 62);
 }
 @media only screen and (1200px < width < 1300px) {
@@ -249,24 +248,15 @@ body {
   .product-burger {
     justify-content: space-between;
   }
-  #yes,
-  #no {
-    padding: 6px 10px;
-    font-size: 0.82rem;
-    margin: 0 20px;
-    cursor: pointer;
-  }
-  #yes {
-    top: 60%;
-    left: 20%;
-    margin-right: 130px;
-  }
-  #no {
-    top: 60%;
-    left: 50%;
-  }
+
   .padhnajau {
     font-size: 1.5rem;
     padding: 8px 12px;
+  }
+  #yes,
+  #no {
+    width: 110px;
+    font-size: 0.9rem;
+    padding: 8px 10px;
   }
 }

@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function CartProducts({ cartProducts, increaseQuantity, decreaseQuantity }) {
+  function showMessage() {
+    const message = document.getElementById("message");
+    message.style.display = "flex";
+  }
+  useEffect(() => {
+    const confirmBuy = document.getElementById("confirm-buy");
+    if (confirmBuy) {
+      confirmBuy.addEventListener("click", showMessage);
+      return () => {
+        confirmBuy.removeEventListener("click", showMessage);
+      };
+    }
+  }, [cartProducts]);
   return (
     <div className="cartProducts" id="cartProducts">
       <div className="product-burger">
