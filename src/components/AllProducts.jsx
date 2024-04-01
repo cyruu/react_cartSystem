@@ -36,6 +36,11 @@ function AllProducts({ allProducts, addToCart, cartProducts, removeFromCart }) {
               pointerEvents: "none",
             }}
           ></i>
+          {cartProducts.length > 0 ? (
+            <span id="cartItems">{cartProducts.length}</span>
+          ) : (
+            ""
+          )}
         </button>
       </div>
       <div className="allProductsContainer">
