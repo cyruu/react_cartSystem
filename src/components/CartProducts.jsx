@@ -1,9 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function CartProducts({ cartProducts, increaseQuantity, decreaseQuantity }) {
   return (
-    <div className="cartProducts">
-      <h1>Cart</h1>
+    <div className="cartProducts" id="cartProducts">
+      <div className="product-burger">
+        <h1>Cart</h1>
+        <button
+          className="burger"
+          id="close-button"
+          style={{ border: "none", background: "none", color: "white" }}
+        >
+          <i
+            className="fa-solid fa-xmark"
+            style={{
+              fontSize: "1.4rem",
+              pointerEvents: "none",
+            }}
+          ></i>
+        </button>
+      </div>
       {cartProducts.length != 0 ? (
         <div className="showPrice">
           <b>Total:</b> Rs.
@@ -36,6 +51,11 @@ function CartProducts({ cartProducts, increaseQuantity, decreaseQuantity }) {
           })
         ) : (
           <p>Empty cart</p>
+        )}
+        {cartProducts.length != 0 ? (
+          <button id="confirm-buy">Order now</button>
+        ) : (
+          ""
         )}
       </div>
     </div>
