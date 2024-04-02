@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import CartProducts from "./CartProducts";
-
+// component re renders when ever state or prop changes
 function AllProducts({ allProducts, addToCart, cartProducts, removeFromCart }) {
   function slideCartSection() {
     const cartSection = document.getElementById("cartProducts");
