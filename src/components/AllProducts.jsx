@@ -56,6 +56,7 @@ function AllProducts({ allProducts, addToCart, cartProducts, removeFromCart }) {
                     Add to Cart
                   </button>
                 ) : (
+                  // remove from cart
                   <button
                     className="btn remove"
                     onClick={() => removeFromCart(product.id)}
