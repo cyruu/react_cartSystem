@@ -51,6 +51,7 @@ function AllProducts({ allProducts, addToCart, cartProducts, removeFromCart }) {
               <p className="price">Rs. {product.price}</p>
               <div className="button">
                 {!cartProducts.some((cproduct) => cproduct.id == product.id) ? (
+                  // add to cart button
                   <button className="btn" onClick={() => addToCart(product.id)}>
                     Add to Cart
                   </button>
