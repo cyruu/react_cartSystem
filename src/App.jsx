@@ -37,7 +37,9 @@ function App() {
   };
   const getAllData = async () => {
     try {
-      const res = await fetch("https://dummyjson.com/products?limit=8");
+      const res = await fetch(
+        "https://dummyjson.com/products/category/smartphones?limit=8"
+      );
       const { products } = await res.json();
       setAllProducts(products);
       setLoading(false);
